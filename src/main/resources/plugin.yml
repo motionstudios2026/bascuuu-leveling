@@ -1,0 +1,24 @@
+name: bascuuu-leveling
+main: com.bascuuu.leveling.BascuuuLevelingPlugin
+version: 1.0.0
+api-version: 1.21
+author: bascuuu
+depend: []
+softdepend:
+  - Vault
+  - PlaceholderAPI
+commands:
+  bascuuu:
+    description: Abre el menú de leveling
+    usage: /<command> [reload|set|info]
+    aliases: [leveling]
+  leveling:
+    description: Alias de /bascuuu
+    usage: /<command> [reload|set|info]
+permissions:
+  bascuuu.admin.reload:
+    description: Recarga la configuración de bascuuu-leveling
+    default: op
+  bascuuu.admin.set:
+    description: Ajusta niveles manualmente
+    default: op

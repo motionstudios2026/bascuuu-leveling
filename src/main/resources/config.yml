@@ -1,0 +1,95 @@
+cost-formula:
+  jump:
+    base-cost: 100.0
+    multiplier: 1.05
+  strength:
+    base-cost: 150.0
+    multiplier: 1.06
+  resistance:
+    base-cost: 150.0
+    multiplier: 1.06
+  xp_boost:
+    base-cost: 200.0
+    multiplier: 1.07
+
+effects:
+  jump:
+    value-per-level: 0.01
+  strength:
+    value-per-level: 0.05
+  resistance:
+    value-per-level: 0.1
+    apply-to: ARMOR_TOUGHNESS
+  xp_boost:
+    percent-per-level: 0.5
+
+menu:
+  title: "&8ʟᴇᴠᴇʟɪɴɢ ꜱʏꜱᴛᴇᴍ (ʙʏ ʙᴀꜱᴄᴜᴇʟᴘʀᴏɢᴏ)"
+  size: 54
+  fill-item:
+    enabled: true
+    material: GRAY_STAINED_GLASS_PANE
+    slot: [0,1,2,3,4,5,6,7,8, 45,46,47,48,49,50,51,52,53]
+  progress-bar:
+    filled: "|"
+    empty: "-"
+    length: 20
+    filled-color: "&a"
+    empty-color: "&7"
+  sound-success: ENTITY_PLAYER_LEVELUP
+  sound-fail: ENTITY_VILLAGER_NO
+  items:
+    jump:
+      enabled: true
+      slot: 20
+      material: FEATHER
+      name: "&bꜱᴀʟᴛᴏ"
+      lore:
+        - "&7Nivel: &f%level%/%max_level%"
+        - "&7Costo siguiente nivel: &a$%cost%"
+        - "&7Progreso: %progress_bar%"
+        - ""
+        - "&eClick para mejorar"
+      glow-if-maxed: true
+      sound-success: ENTITY_PLAYER_LEVELUP
+      sound-fail: ENTITY_VILLAGER_NO
+    strength:
+      enabled: true
+      slot: 22
+      material: IRON_SWORD
+      name: "&cꜰᴜᴇʀᴢᴀ"
+      lore:
+        - "&7Nivel: &f%level%/%max_level%"
+        - "&7Costo siguiente nivel: &a$%cost%"
+        - "&7Progreso: %progress_bar%"
+        - ""
+        - "&eClick para mejorar"
+    resistance:
+      enabled: true
+      slot: 24
+      material: SHIELD
+      name: "&9ʀᴇꜱɪꜱᴛᴇɴᴄɪᴀ"
+      lore:
+        - "&7Nivel: &f%level%/%max_level%"
+        - "&7Costo siguiente nivel: &a$%cost%"
+        - "&7Progreso: %progress_bar%"
+        - ""
+        - "&eClick para mejorar"
+    xp_boost:
+      enabled: true
+      slot: 30
+      material: EXPERIENCE_BOTTLE
+      name: "&aMᴍᴀꜱ xᴘ"
+      lore:
+        - "&7Nivel: &f%level%/%max_level%"
+        - "&7Costo siguiente nivel: &a$%cost%"
+        - "&7Progreso: %progress_bar%"
+        - ""
+        - "&eClick para mejorar"
+    summary:
+      enabled: true
+      slot: 40
+      material: NETHER_STAR
+      name: "&6ᴛᴜ ᴘʀᴏɢʀᴇꜱᴏ"
+      lore:
+        - "&7Nivel total: &f%total_level%"
