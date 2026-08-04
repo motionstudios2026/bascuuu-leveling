@@ -6,6 +6,7 @@ author: bascuuu
 depend: []
 softdepend:
   - Vault
+  - Vault2.0
   - PlaceholderAPI
 commands:
   bascuuu:

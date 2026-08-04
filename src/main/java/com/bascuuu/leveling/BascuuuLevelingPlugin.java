@@ -122,15 +122,18 @@ public final class BascuuuLevelingPlugin extends JavaPlugin implements Listener,
     }
 
     private boolean setupEconomy() {
-        if (getServer().getPluginManager().getPlugin("Vault") == null) {
-            return false;
-        }
         RegisteredServiceProvider<Economy> rsp = getServer().getServicesManager().getRegistration(Economy.class);
         if (rsp == null) {
+            getLogger().warning("No se encontró un proveedor de economía compatible con Vault.");
             return false;
         }
         economy = rsp.getProvider();
-        return economy != null;
+        if (economy == null) {
+            getLogger().warning("El proveedor de economía Vault es nulo.");
+            return false;
+        }
+        getLogger().info("Economía conectada: " + economy.getName() + " (Vault-compatible)");
+        return true;
     }
 
     private void loadConfigValues() {
